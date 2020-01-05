@@ -1,0 +1,10 @@
+Django tutorials:
+
+https://www.youtube.com/watch?v=TblSa29DX6I
+
+
+
+to create python Django for Hotel management:
+
+https://wsvincent.com/simple-django-project/
+
