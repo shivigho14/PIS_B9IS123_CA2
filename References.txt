@@ -8,3 +8,44 @@ to create python Django for Hotel management:
 
 https://wsvincent.com/simple-django-project/
 
+
+
+
+commands
+
+C:\Users\vic>doskey /history
+python -version
+python -v
+python
+pip
+install
+django
+pip install django
+python -m pip install --upgrade pip
+python --version
+django --version
+hist
+doskey /history
+doskey
+py
+py -m django --version
+py --version
+py
+pip -m pip install django
+py  -m pip install django
+doskey /history
+
+
+py  -m pip install django
+django --version
+py -m django --versino
+py -m django --version
+doskey /history
+python manage.py runserver
+django-admin startproject home
+
+
+cd C:\Users\vic\PIS_B9IS123_CA2
+
+
+
