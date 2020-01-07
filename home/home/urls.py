@@ -11,6 +11,8 @@ from facilities.views import add_new_Staff
 from facilities.views import Staff_list
 from facilities.views import Add_new_facility
 from facilities.views import AddNewBookingFn
+from facilities.views import CancelBookingFn
+from facilities.views import listBooking
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -29,6 +31,8 @@ urlpatterns = [
     url(r'^listStaff/$',Staff_list),
     url(r'^AddNewFac/$',Add_new_facility),
     url(r'^NewBooking/$',AddNewBookingFn),
+    url(r'^CancelBooking/$',CancelBookingFn),
+    url(r'^listBooking/$',listBooking),
     
 
     

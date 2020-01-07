@@ -109,4 +109,26 @@ def AddNewBookingFn(request):
     context={'form':form}
     return render(request,"NewBookingForm.html",context)
 
+from .forms import CancelBookingForm
+def CancelBookingFn(request):
+    mf=CancelBookingForm()
+    obj=Bookings.objects.all()
+    form =CancelBookingForm(request.POST)
+    if request.method == 'POST':
+        # form.save()
+        instance = Bookings.objects.get(id=request.POST['id'])
+        instance.delete()
+        print(request.POST)
+        form=CancelBookingForm()
+        print(request.POST)
+    else:
+            print form.errors
+    context={'form':form,'fobj':obj}
+    return render(request,"CancelBookingForm.html",context)
 
+
+from .models import Bookings
+def listBooking(request):
+    obj=Bookings.objects.all()
+    context={'fobj':obj}
+    return render(request,"listBooking.html",context)

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>List all Bookings</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>List of all Bookings</h1>
+
+
+
+
+<table style="width:100%" border="1">
+    <tr><th>ID</th>
+        <th>CustomerName</th>
+      <th>custID</th>
+      <th>RoomNo</th>
+      <th>CheckinDate</th>
+      <th>CheckOutDate</th>
+      <th>TotalCost</th>
+    </tr>
+    {% for i in fobj %}
+    <tr>
+      <td>{{ i.id}}</td>
+        <td>{{ i.CustomerName}}</td>
+      <td>{{ i.custID}}</td>
+      <td>{{ i.RoomNo}}</td>
+      <td>{{ i.CheckinDate}}</td>
+      <td>{{ i.CheckOutDate}}</td>
+      <td>{{ i.TotalCost}}</td>
+    </tr>
+
+    {% endfor %}  
+  </table>
+  
+<p>
+    <div class="footer">
+        <!-- {#% include "/home/footer.html" %}     -->
+        {% include "footer.html" %}    
+        </div>
+    </p>
+</body>
+</html>

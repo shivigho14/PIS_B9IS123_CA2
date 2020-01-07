@@ -39,4 +39,10 @@ class NewBookingForm(forms.ModelForm):
         fields=['CustomerName','custID','RoomNo','CheckinDate','CheckOutDate','TotalCost']
 
 
+class CancelBookingForm(forms.ModelForm):
+    class Meta:
+        model = Bookings
+        fields=['id']
+
+
 

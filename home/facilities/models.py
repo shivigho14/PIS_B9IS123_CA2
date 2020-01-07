@@ -33,12 +33,12 @@ class NewCustomerReg(models.Model):
     IDNumber=models.TextField()
 
 class Bookings(models.Model):
-    CustomerName=models.TextField()
-    custID=models.TextField()
-    RoomNo=models.TextField()
-    CheckinDate=models.DateTimeField() 
-    CheckOutDate=models.DateTimeField() 
-    TotalCost=models.FloatField()
+    CustomerName=models.TextField(null=True, blank=True)
+    custID=models.TextField(null=True, blank=True)
+    RoomNo=models.TextField(null=True, blank=True)
+    CheckinDate=models.DateTimeField(null=True, blank=True) 
+    CheckOutDate=models.DateTimeField(null=True, blank=True) 
+    TotalCost=models.FloatField(null=True, blank=True)
 
 
 class RegisterNewEmp(models.Model):
