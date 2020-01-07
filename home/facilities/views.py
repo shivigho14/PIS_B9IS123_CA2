@@ -12,7 +12,7 @@ def facility_overview(request):
 
 
 from .models import Product
-from .forms import ProductForm
+
 
 def product_detail_view(request):
     obj=Product.objects.get(id=1)
@@ -27,7 +27,7 @@ def product_detail_view(request):
     return render(request,"detail.html",context)
 
 
-
+from .forms import ProductForm
 def product_crea_view(request):
     # form =ProductForm(request.POST or None)
     form =ProductForm(request.POST)
@@ -38,3 +38,23 @@ def product_crea_view(request):
             print form.errors
     context={'form':form}
     return render(request,"create.html",context)
+
+from .forms import RawPrdForm
+def product_crea_view1(request):
+    mf=RawPrdForm()
+    form =RawPrdForm(request.POST)
+    if form.is_valid():
+        form.save()
+        print(request.POST)
+        form=RawPrdForm()
+        print(request.POST)
+    else:
+            print form.errors
+    context={'form':form}
+    return render(request,"create1.html",context)
+
+from .models import NewCustomerReg
+def customer_list(request):
+    obj=NewCustomerReg.objects.all()
+    context={'fobj':obj}
+    return render(request,"listCust.html",context)

@@ -1,9 +1,13 @@
 
+from django.conf import settings
 from django.conf.urls import url,include
 from django.contrib import admin
 from .import views 
 from facilities.views import product_detail_view
 from facilities.views import product_crea_view
+from facilities.views import product_crea_view1
+from facilities.views import customer_list
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls), # admin should be start of the string. ^ means that. $ sign mean s end of the string. 
@@ -15,5 +19,7 @@ urlpatterns = [
     url(r'^footer/$', views.footer), # about page
     url(r'^product/',product_detail_view),
     url(r'^create/',product_crea_view),
+    url(r'^create1/$',product_crea_view1),
+    url(r'^listCust/$',customer_list),
 
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

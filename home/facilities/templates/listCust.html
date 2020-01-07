@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>List all Customers</title>
+</head>
+
+<body style="text-align: center;">
+<!-- <h1>{{title}}</h1>
+<p>{{desc}}</p> -->
+
+
+<!-- <form method='POST'> {% csrf_token%}
+    {{form.as_p}}
+    <input type='submit' value='Save'/>
+</form> -->
+
+
+<!-- CustomerName=models.TextField()
+title=models.TextField()
+Address=models.TextField()
+IDType=models.TextField()
+IDNumber=models.TextField() -->
+
+<table style="width:100%" border="1">
+    <tr>
+        <th>CustomerID</th>
+      <th>CustomerName</th>
+      <th>title</th>
+      <th>Address</th>
+      <th>IDType</th>
+      <th>IDNumber</th>
+    </tr>
+    {% for i in fobj %}
+    <tr>
+        <td>{{ i.id}}</td>
+      <td>{{ i.CustomerName}}</td>
+      <td>{{ i.title}}</td>
+      <td>{{ i.Address}}</td>
+      <td>{{ i.IDType}}</td>
+      <td>{{ i.IDNumber}}</td>
+    </tr>
+
+    {% endfor %}  
+  </table>
+  
+<p>
+    <div class="footer">
+        <!-- {#% include "/home/footer.html" %}     -->
+        {% include "footer.html" %}    
+        </div>
+    </p>
+</body>
+</html>

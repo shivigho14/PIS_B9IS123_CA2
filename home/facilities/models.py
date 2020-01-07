@@ -24,3 +24,39 @@ class Product(models.Model):
     price=models.TextField()
     summary=models.TextField(default='default text')
     
+
+class NewCustomerReg(models.Model):
+    CustomerName=models.TextField()
+    title=models.TextField()
+    Address=models.TextField()
+    IDType=models.TextField()
+    IDNumber=models.TextField()
+
+class Bookings(models.Model):
+    CustomerName=models.TextField()
+    custID=models.TextField()
+    RoomNo=models.TextField()
+    CheckinDate=models.DateTimeField(auto_now_add=True) 
+    CheckOutDate=models.DateTimeField(auto_now_add=True) 
+    TotalCost=models.FloatField()
+
+
+class RegisterNewEmp(models.Model):
+    EmpName=models.TextField()
+    IDType=models.TextField()
+    IDNumber=models.TextField()
+    Address=models.TextField()
+    BloodGroup=models.TextField()
+    DOB=models.DateTimeField(auto_now_add=True) 
+    Wage=models.FloatField() 
+    Desc=models.TextField()
+    Designation=models.TextField()
+    SocialSecNo=models.TextField()
+
+
+class RegisterNewFacility(models.Model):
+    FacilityName=models.TextField()
+    BuildingNo=models.IntegerField()
+    Floor=models.IntegerField()
+    Description=models.TextField()
+    MinorsAllowed=models.TextField()
