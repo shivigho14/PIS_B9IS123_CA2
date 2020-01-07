@@ -58,3 +58,27 @@ def customer_list(request):
     obj=NewCustomerReg.objects.all()
     context={'fobj':obj}
     return render(request,"listCust.html",context)
+
+
+from .models import RegisterNewEmp
+def Staff_list(request):
+    obj=RegisterNewEmp.objects.all()
+    context={'fobj':obj}
+    return render(request,"listStaff.html",context)
+
+#from .models import RegisterNewEmp
+from .forms import AddNewEmp
+def add_new_Staff(request):
+    mf=AddNewEmp()
+    form =AddNewEmp(request.POST)
+    if form.is_valid():
+        form.save()
+        print(request.POST)
+        form=AddNewEmp()
+        print(request.POST)
+    else:
+            print form.errors
+    context={'form':form}
+    return render(request,"AddNewStaff.html",context)
+
+    

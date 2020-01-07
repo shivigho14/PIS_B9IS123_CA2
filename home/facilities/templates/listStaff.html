@@ -3,29 +3,36 @@
 
 <head>
 <meta charset="utf-8">
-<title>List all Customers</title>
+<title>List all Staff</title>
 </head>
 
 <body style="text-align: center;">
-    <h1>List of all Registered Customers</h1>
-
+  <h1>List of all Registered Staff</h1>
 <table style="width:100%" border="1">
     <tr>
-        <th>CustomerID</th>
-      <th>CustomerName</th>
-      <th>title</th>
-      <th>Address</th>
+        <th>EmpName</th>
       <th>IDType</th>
       <th>IDNumber</th>
+      <th>Address</th>
+      <th>BloodGroup</th>
+      <th>DOB</th>
+      <th>Wage</th>
+      <th>Desc</th>
+      <th>Designation</th>
+      <th>SocialSecNo</th>
     </tr>
     {% for i in fobj %}
     <tr>
-        <td>{{ i.id}}</td>
-      <td>{{ i.CustomerName}}</td>
-      <td>{{ i.title}}</td>
-      <td>{{ i.Address}}</td>
+        <td>{{ i.EmpName}}</td>
       <td>{{ i.IDType}}</td>
       <td>{{ i.IDNumber}}</td>
+      <td>{{ i.Address}}</td>
+      <td>{{ i.BloodGroup}}</td>
+      <td>{{ i.DOB}}</td>
+      <td>{{ i.Wage}}</td>
+      <td>{{ i.Desc}}</td>
+      <td>{{ i.Designation}}</td>
+      <td>{{ i.SocialSecNo}}</td>
     </tr>
 
     {% endfor %}  

@@ -7,6 +7,8 @@ from facilities.views import product_detail_view
 from facilities.views import product_crea_view
 from facilities.views import product_crea_view1
 from facilities.views import customer_list
+from facilities.views import add_new_Staff
+from facilities.views import Staff_list
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -21,5 +23,9 @@ urlpatterns = [
     url(r'^create/',product_crea_view),
     url(r'^create1/$',product_crea_view1),
     url(r'^listCust/$',customer_list),
+    url(r'^addNewStaff/$',add_new_Staff),
+    url(r'^listStaff/$',Staff_list),
+
+    
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,8 +1,8 @@
 from django import forms
 
-from .models import Product
-from .models import NewCustomerReg
 
+
+from .models import Product
 class ProductForm(forms.ModelForm):
     class Meta:
          model = Product
@@ -14,14 +14,16 @@ class ProductForm(forms.ModelForm):
 #     #price=forms.DecimalField()
 #     price=forms.CharField()
 
-
+from .models import NewCustomerReg
 class RawPrdForm(forms.ModelForm):
     class Meta:
         model = NewCustomerReg
         fields=['CustomerName','title','Address','IDType','IDNumber']
-        # CustomerName=forms.CharField()
-        # title=forms.CharField()
-        # Address=forms.CharField()
-        # IDType=forms.CharField()
-        # IDNumber=forms.CharField()
 
+from .models import RegisterNewEmp
+class AddNewEmp(forms.ModelForm):
+    class Meta:
+        model = RegisterNewEmp
+        fields=['EmpName','IDType','IDNumber','Address','BloodGroup','DOB','Wage','Desc','Designation','SocialSecNo']
+
+    

@@ -47,9 +47,9 @@ class RegisterNewEmp(models.Model):
     IDNumber=models.TextField()
     Address=models.TextField()
     BloodGroup=models.TextField()
-    DOB=models.DateTimeField(auto_now_add=True) 
+    DOB=models.DateTimeField() 
     Wage=models.FloatField() 
-    Desc=models.TextField()
+    Desc=models.TextField(null=True, blank=True)
     Designation=models.TextField()
     SocialSecNo=models.TextField()
 
