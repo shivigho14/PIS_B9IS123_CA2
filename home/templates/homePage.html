@@ -3,19 +3,40 @@
 
 <head>
 <meta charset="utf-8">
-<title>Home pageers</title>
+<title>Home pages</title>
 
 
 </head>
 
 <body>
-
-<h1>This is our home page dude
-    <p> welcome to the django appss!!!</p>
+User login is:{{request.user}}
+<br>
+Is user authenticated: {{request.user.is_authenticated}}
+<h1>Welcome to Hotel Management Systems!!!
 </h1>
+   
+<h2>Please choose the function to perform...</h2>
+
+<a href="\">Register New customer</a>
+<br>
+<a href="\">Register New booking</a>
+<br>
+    <a href="\">Register New Staff</a>
+    <br>
+        <a href="\">Add new Room to the Hotel</a>
+        <br>
+            <a href="\">list Bookings</a>
+            <br>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+
 <div class="footer">
-    
-    {% include "footer.html" %}    
-    </div>
+ {% include "footer.html" %}    
+ </div>
 </body>
 </html>

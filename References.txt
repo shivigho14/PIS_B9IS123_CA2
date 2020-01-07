@@ -35,7 +35,7 @@ pip -m pip install django
 py  -m pip install django
 doskey /history
 
-
+pip install django==2.0.7
 py  -m pip install django
 django --version
 py -m django --versino
@@ -46,6 +46,142 @@ django-admin startproject home
 
 
 cd C:\Users\vic\PIS_B9IS123_CA2
+
+python manage.py startapp facilities
+
+
+#asdmin urls
+http://127.0.0.1:8000/admin/login/?next=/admin/
+
+python manage.py createsuperuser
+C:\Users\vic\PIS_B9IS123_CA2\home>python manage.py createsuperuser
+Username (leave blank to use 'vic'): admin
+Email address: admin@admin.com
+Password:pythonadmin123
+Superuser created successfully.
+
+#to create a new app
+
+python manage.py startapp facilities
+
+python manage.py migrate
+python manage.py makemigrations
+#to run our inbuilt database
+#to run our inbuilt database
+#to run our inbuilt database
+python manage.py migrate 
+
+
+python manage.py.shell
+from facilities.models import Product
+Product.Objects.get(id =1)
+obj=Product.Objects.get(id =1)
+dir(obj) # check all the attributes and method we have in here
+obj.title # gram the cols we defined in the models
+
+
+
+
+
+
+
+
+python manage.py shell
+from facilities.models import Product
+Product.objects.all()
+Product.objects.create(title='new2',desc='desc2',price='prioce2',summary='sum1')
+
+
+print(args,kwargs)
+
+
+
+
+from home.models import RoomsInHotel
+
+from <folder>.models import <class name>
+
+
+Article
+
+Article.objects.all() # select the article object 
+
+article=Article()
+
+article
+
+article.title="hello"
+
+<class>.<fieldname>="<value>"
+
+article.save()
+
+
+Article.objects.all()[0].title
+
+
+
+
+################
+C:\Users\vic\PIS_B9IS123_CA2\home>python manage.py shell
+>>> from articles.models import article
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ImportError: No module named articles.models
+>>> from facilities.models import facilities
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ImportError: cannot import name facilities
+>>> from facilities.models import RoomsInHotel
+>>>
+>>> RoomsInHotel
+<class 'facilities.models.RoomsInHotel'>
+>>> RoomsInHotel.objects.all()
+<QuerySet []>
+>>> rih=RoomsInHotel()\
+...
+>>> rih=RoomsInHotel()
+>>> rih
+<RoomsInHotel: RoomsInHotel object>
+>>> rih.RoomNumber=123
+>>> rih
+<RoomsInHotel: RoomsInHotel object>
+>>> rih.RoomNumber
+123
+>>> rih.save()
+>>> RoomsInHotel.objects.all()
+<QuerySet [<RoomsInHotel: RoomsInHotel object>]>
+>>> RoomsInHotel.objects.all.RoomNumber()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'function' object has no attribute 'RoomNumber'
+>>> RoomsInHotel.objects.RoomNumber()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'RoomNumber'
+>>> RoomsInHotel.objects.all()[0]
+<RoomsInHotel: RoomsInHotel object>
+>>> RoomsInHotel.objects.all()[0].title
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'RoomsInHotel' object has no attribute 'title'
+>>> RoomsInHotel.objects.all()[0].RoomNumber
+u'123'
+>>> RoomsInHotel.objects.all()[0]
+<RoomsInHotel: RoomsInHotel object>
+>>> RoomsInHotel.objects.all()
+<QuerySet [<RoomsInHotel: RoomsInHotel object>]>
+>>> RoomsInHotel.objects.all()[0]
+<RoomsInHotel: RoomsInHotel object>
+>>> from facilities.models import RoomsInHotel
+>>> RoomsInHotel.objects.all()[0]
+<RoomsInHotel: RoomsInHotel object>
+>>> RoomsInHotel.objects.all()
+<QuerySet [<RoomsInHotel: RoomsInHotel object>]>
+>>>
+######################
+######################
+######################
 
 
 

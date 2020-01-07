@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Hello test about</title>
+    </head>
+    <body>
+        <p>Hello body test</p>
+        <p>{{request.user}}</p>
+        <br>
+        <p>{{ texter }}</p>
+        <br>
+        <p>{{lister}}</p>
+
+        <ul>
+        {% for my_sub_item in lister%}
+<li>{{my_sub_item}}</li>
+        {% endfor%}
+    </ul>
+
+
+    </body>
+</html>
