@@ -36,8 +36,8 @@ class Bookings(models.Model):
     CustomerName=models.TextField()
     custID=models.TextField()
     RoomNo=models.TextField()
-    CheckinDate=models.DateTimeField(auto_now_add=True) 
-    CheckOutDate=models.DateTimeField(auto_now_add=True) 
+    CheckinDate=models.DateTimeField() 
+    CheckOutDate=models.DateTimeField() 
     TotalCost=models.FloatField()
 
 

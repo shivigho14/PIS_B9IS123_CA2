@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Add new Booking</title>
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static './newcust/view.css' %}" media="all"> -->
+<link rel="stylesheet" type="text/css" href="/static/newcust/view.css" media="all">
+<script type="text/javascript" src="/static/newcust/view.js"></script>
+
+</head>
+
+<body id="main_body" class="no_guidelines safari">
+
+    <h1>Add New Booking Page</h1>
+
+    
+    <img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Book Room / Register </a></h1>
+		<form id="form_94771" class="appnitro"  method="post" action=""> {% csrf_token%}
+					<div class="form_description">
+			<h2>Book Room / Register </h2>
+			<p></p>
+		</div>						
+			<ul >
+            
+    
+
+					<li id="li_1" >
+		<label class="description" for="element_1">Customer Name </label>
+		<div>
+			<input id="CustomerName" name="CustomerName" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Customer ID </label>
+		<div>
+			<input id="custID" name="custID" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">Room Number </label>
+		<div>
+			<input id="RoomNo" name="RoomNo" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Checkin Date </label>
+		        
+        <input   id="CheckinDate" name="CheckinDate"  type="date" name="EndDate"> 
+
+        </li>	
+        	<li id="li_8" >
+		<label class="description" for="element_8">Checkout Date </label>
+		
+		<input   id="CheckOutDate" name="CheckOutDate"  type="date" name="EndDate"> 
+		 
+		</li>		<li id="li_9" >
+		<label class="description" for="element_9">Checkout Time </label>
+        
+    </li>		<li id="li_10" >
+		<label class="description" for="element_10">Total Cost </label>
+		<div>
+			<input id="TotalCost" name="TotalCost" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="94771" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+			
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+    
+
+
+
+	
+
+<p>
+    <div class="footer">
+        <!-- {#% include "/home/footer.html" %}     -->
+        {% include "footer.html" %}    
+        </div>
+    </p>
+</body>
+</html>

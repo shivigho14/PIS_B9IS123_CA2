@@ -32,4 +32,11 @@ class AddNewFacForm(forms.ModelForm):
         model = RegisterNewFacility
         fields=['FacilityName','BuildingNo','Floor','Description','MinorsAllowed']
 
+from .models import Bookings
+class NewBookingForm(forms.ModelForm):
+    class Meta:
+        model = Bookings
+        fields=['CustomerName','custID','RoomNo','CheckinDate','CheckOutDate','TotalCost']
+
+
 

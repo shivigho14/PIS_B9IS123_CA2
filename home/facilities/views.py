@@ -94,3 +94,19 @@ def Add_new_facility(request):
             print form.errors
     context={'form':form}
     return render(request,"AddNewFac.html",context)
+
+from .forms import NewBookingForm
+def AddNewBookingFn(request):
+    mf=NewBookingForm()
+    form =NewBookingForm(request.POST)
+    if form.is_valid():
+        form.save()
+        print(request.POST)
+        form=NewBookingForm()
+        print(request.POST)
+    else:
+            print form.errors
+    context={'form':form}
+    return render(request,"NewBookingForm.html",context)
+
+
