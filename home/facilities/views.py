@@ -132,3 +132,10 @@ def listBooking(request):
     obj=Bookings.objects.all()
     context={'fobj':obj}
     return render(request,"listBooking.html",context)
+
+
+from .models import RegisterNewFacility
+def listFacilities(request):
+    obj=RegisterNewFacility.objects.all()
+    context={'fobj':obj}
+    return render(request,"facilities_overview.html",context)

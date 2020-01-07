@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>List all Facilities</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>List of all Facilities</h1>
+
+<table style="width:100%" border="1">
+    <tr>
+      <th>ID</th>
+        <th>FacilityName</th>
+      <th>BuildingNo</th>
+      <th>Floor</th>
+      <th>Description</th>
+      <th>MinorsAllowed</th>
+      
+    </tr>
+    {% for i in fobj %}
+    <tr>
+        <td>{{ i.id}}</td>
+      <td>{{ i.FacilityName}}</td>
+      <td>{{ i.BuildingNo}}</td>
+      <td>{{ i.Floor}}</td>
+      <td>{{ i.Description}}</td>
+      <td>{{ i.MinorsAllowed}}</td>
+    </tr>
+
+    {% endfor %}  
+  </table>
+  
+<p>
+    <div class="footer">
+        <!-- {#% include "/home/footer.html" %}     -->
+        {% include "footer.html" %}    
+        </div>
+    </p>
+</body>
+</html>
