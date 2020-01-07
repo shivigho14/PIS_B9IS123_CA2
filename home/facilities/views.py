@@ -81,4 +81,16 @@ def add_new_Staff(request):
     context={'form':form}
     return render(request,"AddNewStaff.html",context)
 
-    
+from .forms import AddNewFacForm
+def Add_new_facility(request):
+    mf=AddNewFacForm()
+    form =AddNewFacForm(request.POST)
+    if form.is_valid():
+        form.save()
+        print(request.POST)
+        form=AddNewFacForm()
+        print(request.POST)
+    else:
+            print form.errors
+    context={'form':form}
+    return render(request,"AddNewFac.html",context)

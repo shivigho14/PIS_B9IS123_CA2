@@ -9,6 +9,7 @@ from facilities.views import product_crea_view1
 from facilities.views import customer_list
 from facilities.views import add_new_Staff
 from facilities.views import Staff_list
+from facilities.views import Add_new_facility
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -25,6 +26,7 @@ urlpatterns = [
     url(r'^listCust/$',customer_list),
     url(r'^addNewStaff/$',add_new_Staff),
     url(r'^listStaff/$',Staff_list),
+    url(r'^AddNewFac/$',Add_new_facility),
 
     
 

@@ -76,10 +76,12 @@ python manage.py shell
 from facilities.models import Product
 from facilities.models import NewCustomerReg
 from facilities.models import RegisterNewEmp
+from facilities.models import RegisterNewFacility
 Product.objects.get(id =1)
 NewCustomerReg.objects.get(id =1)
 NewCustomerReg.objects.count()
 RegisterNewEmp.objects.count()
+RegisterNewFacility.objects.count()
 dir(NewCustomerReg.objects.get(id =1))
 obj=Product.objects.get(id =1)
 dir(obj) # check all the attributes and method we have in here

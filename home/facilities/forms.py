@@ -26,4 +26,10 @@ class AddNewEmp(forms.ModelForm):
         model = RegisterNewEmp
         fields=['EmpName','IDType','IDNumber','Address','BloodGroup','DOB','Wage','Desc','Designation','SocialSecNo']
 
-    
+from .models import RegisterNewFacility
+class AddNewFacForm(forms.ModelForm):
+    class Meta:
+        model = RegisterNewFacility
+        fields=['FacilityName','BuildingNo','Floor','Description','MinorsAllowed']
+
+
